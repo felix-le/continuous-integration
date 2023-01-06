@@ -30,3 +30,11 @@ jobs:
         with:
           name: remark-lint-report
           path: public/
+      - uses: actions/download-artifact@v3
+        with:
+          name: remark-lint-report
+          path: public/
+    
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: public/
